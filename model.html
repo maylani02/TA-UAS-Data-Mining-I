@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tugas Akhir</title>
+    </head>
+    
+    <body>
+        <form action="{{ url_for('predict') }}" method="post" name="form" style="text-align: center;">
+            <label for="Age">Age:</label>
+            <input type="number" name="Age" step="any" placeholder="Enter Age" required/><br><br>
+            
+            <label for="Gender">Gender:</label>
+            <select name="Gender" required>
+                <option value="0">Female</option>
+                <option value="1">Male</option>
+            </select><br><br>
+            
+            <label for="Height">Height:</label>
+            <input type="number" name="Height" step="any" placeholder="Enter Height" required/><br><br>
+            
+            <label for="Weight">Weight:</label>
+            <input type="number" name="Weight" step="any" placeholder="Enter Weight" required/><br><br>
+            
+            <label for="BMI">BMI:</label>
+            <input type="number" name="BMI" step="any" placeholder="Enter BMI" required/><br><br>
+            
+            <button type="submit">Run</button>
+        </form>
+        
+        
+        <p style="text-align: center;">Prediction SVM : {{ prediction_svm }}</p>
+    </body>
+</html>
